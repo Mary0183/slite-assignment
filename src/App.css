@@ -3,7 +3,7 @@ body {
 }
 
 .App {
-  height: 1040px;
+  height: 100%;
   background-color: #788aee;
   width: 1282px;
   margin: 0 auto;
@@ -18,4 +18,11 @@ body {
 
 .logo-2 {
   padding-left: 20px;
+}
+
+.app-container {
+  display: grid;
+  grid-template-columns: repeat(1, 25% 75%);
+  height: 100%;
+  margin: 0 70px 0 70px;
 }

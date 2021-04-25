@@ -1,0 +1,45 @@
+/* .pc-container {
+  display: grid;
+  grid-template-columns: 940px;
+  background-color: rgb(255, 255, 255);
+} */
+.pc-container {
+  background-color: white;
+  height: 900px;
+  width: 856.48 px;
+  padding-top: 30px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 46px;
+}
+
+.callout {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+}
+.callout h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.callout p:last-child {
+  margin-bottom: 0;
+}
+.callout code {
+  border-radius: 8px;
+}
+.callout + .bs-callout {
+  margin-top: -5px;
+}
+.callout-default {
+  border-left-color: #788aee;
+  width: 480px;
+  height: 50px;
+}
+.callout-default h4 {
+  color: #777;
+}
