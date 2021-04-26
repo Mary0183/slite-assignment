@@ -15,17 +15,25 @@ function PeopleAndCulture() {
           </p>
         </div>
       </div>
-      {/* <div className="link-list">
-        <a className="our-culture" href="#Our culture">
-          Our culture
-        </a>
-        <a className="values" href="#values">
-          Values
-        </a>
-        <a className="tips" href="#tips and tricks">
-          Tips & tricks
-        </a>
-      </div> */}
+      <div className="link-list">
+        <ul>
+          <li>
+            <a className="our-culture" href="#Our culture">
+              Our culture
+            </a>
+          </li>
+          <li>
+            <a className="values" href="#values">
+              Values
+            </a>
+          </li>
+          <li>
+            <a className="tips-n-tricks" href="#tips-n-tricks">
+              Tips & tricks
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
