@@ -1,7 +1,15 @@
 .topbar {
+  display: grid;
+  grid-template-rows: 65px;
   background-color: lightcyan;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
-  height: 65px;
   margin: 0 70px 0 70px;
+  justify-content: end;
+  align-items: center;
+}
+
+.bookmark-star {
+  width: 25px;
+  padding-right: 10px;
 }
