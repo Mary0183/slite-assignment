@@ -1,6 +1,6 @@
 .grid-container-col {
   background-color: lightcoral;
-  height: 900px;
+  height: 930px;
 }
 
 .sidenav-grid {
@@ -15,4 +15,23 @@ a {
   color: #575757;
   font-size: 20px;
   margin-left: 25px;
+}
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.favorites {
+  margin-bottom: 15px;
+}
+
+.people {
+  margin-bottom: 15px;
+}
+
+.policies {
+  margin-bottom: 15px;
 }

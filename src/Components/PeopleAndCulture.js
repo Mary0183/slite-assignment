@@ -7,13 +7,25 @@ function PeopleAndCulture() {
     <div className="pc-container">
       <h1> People & Culture </h1>
       <div className="callout callout-default">
-        <img className="info-icon" src={Info} alt="info icon" />
-        <p>
-          Here you'll find the important information related to our internal
-          culture. You can read about our story, learn about values, and get the
-          full overview of the tools we use.
-        </p>
+        <div className="grid-callout">
+          <p>
+            Here you'll find the important information related to our internal
+            culture. You can read about our story, learn about values, and get
+            the full overview of the tools we use.
+          </p>
+        </div>
       </div>
+      {/* <div className="link-list">
+        <a className="our-culture" href="#Our culture">
+          Our culture
+        </a>
+        <a className="values" href="#values">
+          Values
+        </a>
+        <a className="tips" href="#tips and tricks">
+          Tips & tricks
+        </a>
+      </div> */}
     </div>
   );
 }
