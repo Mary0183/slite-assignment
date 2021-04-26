@@ -1,10 +1,10 @@
 import React from "react";
-import "./PeopleAndCulture.css";
+import "./Policies.css";
 
-function PeopleAndCulture() {
+function Policies() {
   return (
     <div className="pc-container">
-      <h1> People & Culture </h1>
+      <h1> Policies </h1>
       <div className="callout callout-default">
         <div className="grid-callout">
           <p>
@@ -37,4 +37,4 @@ function PeopleAndCulture() {
   );
 }
 
-export default PeopleAndCulture;
+export default Policies;

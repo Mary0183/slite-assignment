@@ -6,3 +6,6 @@ Background: #e5e5e5
 Wave:
 1rst half: #788aee
 2nd half : #546ae4
+
+Static Page:
+background color: #fdfdfd

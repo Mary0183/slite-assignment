@@ -1,5 +1,5 @@
 import React from "react";
-
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./Sidebar.css";
 
 function Sidebar() {
@@ -13,19 +13,26 @@ function Sidebar() {
                 Favorites
               </a>
             </li>
+
             <li>
-              <a className="people" href="#People and culture">
+              <Link className="people" to="/people-and-culture">
                 People and culture
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="policies" href="#Policies">
+              <Link className="policies" to="/policies">
                 Policies
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#Management resources">Management resources</a>
+              <Link className="management-resources" to="/management-resources">
+                Management resources
+              </Link>
             </li>
+
+            {/* <li>
+              <a href="#Management resources">Management resources</a>
+            </li> */}
           </ul>
         </div>
       </div>

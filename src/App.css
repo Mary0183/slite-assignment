@@ -25,4 +25,5 @@ body {
   grid-template-columns: repeat(1, 25% 75%);
   height: 100%;
   margin: 0 70px 0 70px;
+  background-color: #fdfdfd;
 }
