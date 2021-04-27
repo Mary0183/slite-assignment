@@ -1,7 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
-import React from "react";
+import React, { useState } from "react";
 import Logo1 from "./images/Slite.svg";
 import Logo2 from "./images/logo--color.svg";
 import Sidebar from "./Components/Sidebar.js";
@@ -13,7 +12,16 @@ import ManagementResources from "./Components/ManagementResources";
 
 // import wave from "./images/wave.svg";
 
+const favoritesCollection = [
+  {
+    text: "People and culture",
+    path: "/people-and-culture",
+  },
+];
+
 function App() {
+  const [favorite, setFavorite] = useState([favoritesCollection]);
+
   return (
     <Router>
       <div className="App">
@@ -26,7 +34,7 @@ function App() {
 
         <div className="app-container">
           <div className="grid-sidebar">
-            <Sidebar />
+            <Sidebar favoritesCollection={favoritesCollection} />
           </div>
 
           <Switch>
