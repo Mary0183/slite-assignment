@@ -24,16 +24,16 @@ li {
   list-style: none;
 }
 
-.people {
+.links-style {
   margin-bottom: 15px;
   display: block;
 }
 
-.policies {
+/* .policies {
   margin-bottom: 15px;
   display: block;
 }
 .management-resources {
   margin-bottom: 15px;
   display: block;
-}
+} */

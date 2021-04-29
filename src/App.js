@@ -12,15 +12,23 @@ import ManagementResources from "./Components/ManagementResources";
 
 // import wave from "./images/wave.svg";
 
-const favoritesCollection = [
+const routes = [
   {
-    text: "People and culture",
+    title: "People and culture",
     path: "/people-and-culture",
+  },
+  {
+    title: "Policies",
+    path: "/policies",
+  },
+  {
+    title: "Management resources",
+    path: "/management-resources",
   },
 ];
 
 function App() {
-  const [favorite, setFavorite] = useState([favoritesCollection]);
+  const [favorite, setFavorite] = useState([routes]);
 
   return (
     <Router>
@@ -30,11 +38,11 @@ function App() {
           <img className="logo-2" src={Logo2} />
         </div>
 
-        <Breadcrumbs />
+        <Breadcrumbs routes={routes} />
 
         <div className="app-container">
           <div className="grid-sidebar">
-            <Sidebar favoritesCollection={favoritesCollection} />
+            <Sidebar routes={routes} />
           </div>
 
           <Switch>

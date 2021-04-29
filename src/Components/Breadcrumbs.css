@@ -1,6 +1,6 @@
 .topbar {
   display: grid;
-  grid-template-rows: 65px;
+  grid-template-columns: repeat(1, 95% 5%);
   background-color: lightcyan;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
@@ -13,4 +13,34 @@
 .bookmark-star {
   width: 25px;
   padding-right: 10px;
+}
+
+/* Style the list */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li + li:before {
+  padding: 18px;
+  color: black;
+  content: url("../images/right.svg");
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: none;
 }
