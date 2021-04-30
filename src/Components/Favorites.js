@@ -10,16 +10,10 @@ function Favorites(props) {
     <div>
       <ul>
         <li className="favorites">
-          <a onClick={() => setActive(!active)}>Favorites</a>
+          <Link onClick={() => setActive(!active)}>Favorites </Link>
           {active && (
             <ul>
-              {props.routes.map((r) => (
-                <li key={r.title}>
-                  <Link className="people" to={r.path}>
-                    {r.title}
-                  </Link>
-                </li>
-              ))}
+              <li>hello</li>
             </ul>
           )}
         </li>

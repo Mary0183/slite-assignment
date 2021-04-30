@@ -7,11 +7,12 @@ import {
   Redirect,
 } from "react-router-dom";
 import React, { useState } from "react";
+
 import Logo1 from "./images/Slite.svg";
 import Logo2 from "./images/logo--color.svg";
+
 import Sidebar from "./Components/Sidebar.js";
-import Breadcrumbs from "./Components/Breadcrumbs";
-import Home from "./Components/Home";
+import Topbar from "./Components/Topbar.js";
 
 import PeopleAndCulture from "./Components/PeopleAndCulture";
 import Policies from "./Components/Policies";
@@ -43,7 +44,18 @@ const routes = [
 ];
 
 function App() {
-  const [favorite, setFavorite] = useState([routes]);
+  const [favorite, setFavorite] = useState([]);
+  const [star, setStar] = useState("");
+
+  const addFavorites = (favoritePage) => {
+    return favoritePage
+      ? setFavorite((favorite) => [...favoritePage, favorite])
+      : favoritePage;
+  };
+
+  const handleChangeStar = () => {
+    setStar(!star);
+  };
 
   return (
     <Router>
@@ -55,7 +67,11 @@ function App() {
           </Link>
         </div>
 
-        <Breadcrumbs routes={routes} />
+        <Topbar
+          routes={routes}
+          handleChangeStar={handleChangeStar}
+          star={star}
+        />
 
         <div className="app-container">
           <div className="grid-sidebar">
