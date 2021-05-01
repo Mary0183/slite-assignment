@@ -1,11 +1,11 @@
 .Topbar {
   display: grid;
   grid-template-columns: repeat(1, 95% 5%);
-  background-color: lightcyan;
+  background-color: #fdfdfd;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   margin: 0 70px 0 70px;
   justify-content: end;
   align-items: center;
-  border-bottom: 3px solid #c0c0c0;
+  border-bottom: 2px solid #efeff1;
 }

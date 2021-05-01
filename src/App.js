@@ -1,11 +1,5 @@
 import "./App.css";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  Redirect,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import React, { useState } from "react";
 
 import Logo1 from "./images/Slite.svg";
@@ -27,33 +21,33 @@ const routes = [
   //   breadcrumb: "Home",
   // },
   {
-    title: "People and culture",
+    title: "🥇People and culture",
     path: "/people-and-culture",
     breadcrumb: "People and culture",
   },
   {
-    title: "Policies",
+    title: " 📚Policies",
     path: "/policies",
     breadcrumb: "Policies",
   },
   {
-    title: "Management resources",
+    title: "📖Management resources",
     path: "/management-resources",
     breadcrumb: "Management resources",
   },
 ];
 
 function App() {
-  const [favorite, setFavorite] = useState([]);
+  const [favorites, setFavorites] = useState([]); //{title: "Policies" , path: "/Policies"}
   const [star, setStar] = useState("");
 
-  const addFavorites = (favoritePage) => {
-    return favoritePage
-      ? setFavorite((favorite) => [...favoritePage, favorite])
-      : favoritePage;
-  };
+  // const addFavoritePage = (favoritePage) => {
+  //   const newFavoriteList = [...favorites, favoritePage];
+  //   setFavorites(newFavoriteList);
+  // };
 
-  const handleChangeStar = () => {
+  const handleChangeStar = (location) => {
+    console.log(location);
     setStar(!star);
   };
 
@@ -62,8 +56,8 @@ function App() {
       <div className="App">
         <div className="logo">
           <Link to="/people-and-culture">
-            <img className="logo-1" src={Logo1} />
-            <img className="logo-2" src={Logo2} />
+            <img className="logo-1" src={Logo1} alt="logo1" />
+            <img className="logo-2" src={Logo2} alt="logo2" />
           </Link>
         </div>
 
@@ -75,14 +69,14 @@ function App() {
 
         <div className="app-container">
           <div className="grid-sidebar">
-            <Sidebar routes={routes} />
+            <Sidebar
+              routes={routes}
+              star={star}
+              // addFavoritePage={addFavoritePage}
+            />
           </div>
 
           <Switch>
-            {/* <Route path="/" exact>
-              <Redirect to="/people-and-culture" />
-            </Route> */}
-
             <Route path="/people-and-culture" exact>
               <PeopleAndCulture className="grid-pc" />
             </Route>

@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./PeopleAndCulture.css";
 
 function PeopleAndCulture() {
   return (
     <div className="pc-container">
-      <h1> People & Culture </h1>
+      <h1> People & culture </h1>
       <div className="callout callout-default">
         <div className="grid-callout">
           <p>
@@ -15,23 +16,21 @@ function PeopleAndCulture() {
         </div>
       </div>
       <div className="link-list">
-        <ul>
-          <li>
-            <a className="our-culture" href="#Our culture">
-              Our culture
-            </a>
-          </li>
-          <li>
-            <a className="values" href="#values">
-              Values
-            </a>
-          </li>
-          <li>
-            <a className="tips-n-tricks" href="#tips-n-tricks">
-              Tips & tricks
-            </a>
-          </li>
-        </ul>
+        <div className="hello">
+          <Link to="http://example.com/" className="our-culture">
+            Our culture
+          </Link>
+        </div>
+        <div className="hello1">
+          <Link to="http://example.com/" className="values">
+            Values
+          </Link>
+        </div>
+        <div className="hello2">
+          <Link to="http://example.com/" className="tips-n-tricks">
+            Tips & tricks
+          </Link>
+        </div>
       </div>
     </div>
   );

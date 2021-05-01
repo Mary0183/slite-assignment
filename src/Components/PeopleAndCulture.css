@@ -1,90 +1,85 @@
 .pc-container {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  height: 380px;
   background-color: #fdfdfd;
-  height: 900px;
-  width: 856.48 px;
   padding-top: 30px;
+  justify-self: center;
+  width: 580px;
 }
 
 h1 {
   margin: 0;
   font-size: 46px;
+  color: #46474f;
 }
 
 .callout {
+  display: grid;
+  grid-template-rows: 90px;
   padding: 10px;
   margin: 20px 0;
   border: 1px solid #eee;
   border-left-width: 5px;
-  border-radius: 3px;
-}
-.callout h4 {
-  margin-top: 0;
-  margin-bottom: 5px;
-}
-.callout p:last-child {
-  margin-bottom: 0;
-}
-.callout code {
-  border-radius: 8px;
-}
-.callout + .bs-callout {
-  margin-top: -5px;
-}
-.callout-default {
-  border-left-color: #788aee;
-  border-left-width: 8px;
-  width: 510px;
-  height: 80px;
-  background-color: #e5e5e5;
-}
-.callout-default h4 {
-  color: #777;
-}
-.callout {
-  display: grid;
-  grid-template-columns: 510px;
   border-radius: 5px;
 }
+
+.callout-default {
+  border-left-color: #5668e2;
+  border-left-width: 8px;
+  width: 550px;
+  height: 90px;
+  background-color: #edf0ff;
+}
+
 p {
   background: url("../images/Info.svg") 0 2px / 14px 14px no-repeat;
-  background-size: 18px;
+  background-size: 15px;
   width: 490px;
   height: 70px;
-  padding-left: 20px;
+  padding-left: 30px;
+  line-height: 26px;
+  margin-top: 0;
 }
 
 .our-culture {
   background: url("../images/Note.svg") 0 6px / 14px 14px no-repeat;
   background-size: 19px;
   padding-bottom: 10px;
-  background-color: #e5e5e5;
+  background-color: #edf0ff;
   width: 116px;
   padding-left: 20px;
   border-radius: 5px;
   margin-bottom: 15px;
+  margin-left: 0;
   display: block;
+  color: #5168ec;
 }
 
 .values {
   background: url("../images/Note.svg") 0 6px / 14px 14px no-repeat;
   background-size: 19px;
   padding-bottom: 10px;
-  background-color: #e5e5e5;
+  background-color: #edf0ff;
   width: 66px;
   padding-left: 20px;
   border-radius: 5px;
   margin-bottom: 15px;
+  margin-left: 0;
   display: block;
+  color: #5168ec;
 }
 
 .tips-n-tricks {
   background: url("../images/Note.svg") 0 6px / 14px 14px no-repeat;
   background-size: 19px;
   padding-bottom: 10px;
-  background-color: #e5e5e5;
+  background-color: #edf0ff;
   width: 116px;
   padding-left: 20px;
   border-radius: 5px;
   margin-bottom: 15px;
+  margin-left: 0;
   display: block;
+  color: #5168ec;
 }

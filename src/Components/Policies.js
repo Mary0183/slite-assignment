@@ -4,31 +4,31 @@ import "./Policies.css";
 function Policies() {
   return (
     <div className="pc-container">
-      <h1> Policies </h1>
+      <h1>Our Policies </h1>
       <div className="callout callout-default">
         <div className="grid-callout">
           <p>
-            Here you'll find the important information related to our internal
-            culture. You can read about our story, learn about values, and get
-            the full overview of the tools we use.
+            Here you can read about our work remote working agreement,
+            guidelines for protecting sensitive information , and when remote
+            employees should be available and working.
           </p>
         </div>
       </div>
       <div className="link-list">
         <ul>
-          <li>
-            <a className="our-culture" href="#Our culture">
-              Our culture
+          <li className="remote">
+            <a className="remote-working" href="#remote working">
+              💻Remote Work set up
             </a>
           </li>
           <li>
-            <a className="values" href="#values">
-              Values
+            <a className="cybersecurity" href="#cybersecurity">
+              🛸Cybersecurity
             </a>
           </li>
           <li>
-            <a className="tips-n-tricks" href="#tips-n-tricks">
-              Tips & tricks
+            <a className="work-schedule" href="#work schedule">
+              ✔️Work schedule and availability
             </a>
           </li>
         </ul>

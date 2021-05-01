@@ -7,7 +7,7 @@ function Topbar({ routes, handleChangeStar, star }) {
   return (
     <div className="Topbar">
       <Breadcrumbs routes={routes} />
-      <AddRemoveFav handleChangeStar={handleChangeStar} star={star} />
+      <AddRemoveFav star={star} handleChangeStar={handleChangeStar} />
     </div>
   );
 }
