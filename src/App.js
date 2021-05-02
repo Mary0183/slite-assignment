@@ -26,7 +26,7 @@ const routes = [
     breadcrumb: "People and culture",
   },
   {
-    title: " 📚Policies",
+    title: "📚Policies",
     path: "/policies",
     breadcrumb: "Policies",
   },
@@ -36,20 +36,27 @@ const routes = [
     breadcrumb: "Management resources",
   },
 ];
-
+// console.log(routes);
 function App() {
   const [favorites, setFavorites] = useState([]); //{title: "Policies" , path: "/Policies"}
   const [star, setStar] = useState("");
 
-  // const addFavoritePage = (favoritePage) => {
-  //   const newFavoriteList = [...favorites, favoritePage];
-  //   setFavorites(newFavoriteList);
-  // };
-
   const handleChangeStar = (location) => {
-    console.log(location);
-    setStar(!star);
+    const favoritesObj = routes.find((k) => k.path === location);
+    const newFavoriteList = [...favorites, favoritesObj];
+
+    //take the value that the state star has at that moment in time and toggle it
+    //if the new value is true setFavorites to new list
+    setStar((previousStar) => {
+      const newStarValue = !previousStar;
+      if (newStarValue) {
+        setFavorites(newFavoriteList);
+      }
+
+      return newStarValue;
+    });
   };
+  console.log(favorites);
 
   return (
     <Router>
@@ -72,7 +79,8 @@ function App() {
             <Sidebar
               routes={routes}
               star={star}
-              // addFavoritePage={addFavoritePage}
+              favorites={favorites}
+              handleChangeStar={handleChangeStar}
             />
           </div>
 

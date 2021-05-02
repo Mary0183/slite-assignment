@@ -8,7 +8,7 @@ function PeopleAndCulture() {
       <h1> People & culture </h1>
       <div className="callout callout-default">
         <div className="grid-callout">
-          <p>
+          <p className="p-text">
             Here you'll find the important information related to our internal
             culture. You can read about our story, learn about values, and get
             the full overview of the tools we use.

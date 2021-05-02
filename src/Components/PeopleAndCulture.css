@@ -10,7 +10,7 @@
 
 h1 {
   margin: 0;
-  font-size: 46px;
+  font-size: 50px;
   color: #46474f;
 }
 
@@ -27,19 +27,20 @@ h1 {
 .callout-default {
   border-left-color: #5668e2;
   border-left-width: 8px;
-  width: 550px;
+  width: 570px;
   height: 90px;
   background-color: #edf0ff;
 }
 
-p {
+.p-text {
   background: url("../images/Info.svg") 0 2px / 14px 14px no-repeat;
   background-size: 15px;
-  width: 490px;
+  width: 540px;
   height: 70px;
   padding-left: 30px;
   line-height: 26px;
   margin-top: 0;
+  font-size: 1.15em;
 }
 
 .our-culture {

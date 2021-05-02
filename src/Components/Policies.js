@@ -3,11 +3,11 @@ import "./Policies.css";
 
 function Policies() {
   return (
-    <div className="pc-container">
+    <div className="policies-container">
       <h1>Our Policies </h1>
       <div className="callout callout-default">
         <div className="grid-callout">
-          <p>
+          <p className="callout-text">
             Here you can read about our work remote working agreement,
             guidelines for protecting sensitive information , and when remote
             employees should be available and working.
@@ -17,18 +17,34 @@ function Policies() {
       <div className="link-list">
         <ul>
           <li className="remote">
-            <a className="remote-working" href="#remote working">
-              💻Remote Work set up
+            <h2 className="remote-working"> 💻Remote Work set up</h2>
+            <p className="policies-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              consectetur porta est, sed pellentesque felis tincidunt ac.
+            </p>
+            <a className="read-more" href="#remote working">
+              read more...
             </a>
           </li>
           <li>
-            <a className="cybersecurity" href="#cybersecurity">
-              🛸Cybersecurity
+            <h2 className="remote-working">🛸Cybersecurity </h2>
+
+            <p className="policies-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              consectetur porta est, sed pellentesque felis tincidunt ac.
+            </p>
+            <a className="read-more" href="#remote working">
+              read more...
             </a>
           </li>
           <li>
-            <a className="work-schedule" href="#work schedule">
-              ✔️Work schedule and availability
+            <h2 className="remote-working">✔️Work schedule and availability</h2>
+            <p className="policies-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              consectetur porta est, sed pellentesque felis tincidunt ac.
+            </p>
+            <a className="read-more" href="#remote working">
+              read more...
             </a>
           </li>
         </ul>
