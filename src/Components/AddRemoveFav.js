@@ -15,6 +15,7 @@ function useSetLocation(setCurrentLocation) {
 function AddRemoveFav(props) {
   const [currentLocation, setCurrentLocation] = useState("");
   useSetLocation(setCurrentLocation);
+
   return (
     <div className="AddRemoveFav">
       {!props.star ? (

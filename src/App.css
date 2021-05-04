@@ -8,19 +8,32 @@ body {
   background-color: #788aee;
   width: 1282px;
   margin: 0 auto;
-  padding-top: 60px;
+
   margin-top: 60px;
 }
 
 .logo {
-  height: 60px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 44px;
   margin-left: 70px;
   cursor: pointer;
-  width: 150px;
+  width: 140px;
+  margin-top: 30px;
 }
-
-.logo-2 {
+.grid-logo1 {
+  height: 33px;
+  align-self: start;
+}
+img.logo-1 {
+  height: 30px;
+}
+.grid-logo2 {
+  align-self: center;
+}
+img.logo-2 {
   padding-left: 20px;
+  height: 35px;
 }
 
 .app-container {

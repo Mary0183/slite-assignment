@@ -1,6 +1,7 @@
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import React, { useState } from "react";
+import { Switch, Route, Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 import Logo1 from "./images/Slite.svg";
 import Logo2 from "./images/logo--color.svg";
@@ -36,10 +37,14 @@ const routes = [
     breadcrumb: "Management resources",
   },
 ];
-// console.log(routes);
+
 function App() {
+  let location = useLocation();
   const [favorites, setFavorites] = useState([]); //{title: "Policies" , path: "/Policies"}
-  const [star, setStar] = useState("");
+  const [star, setStar] = useState(false);
+  const [currentLocation, setCurrentLocation] = useState("");
+
+  // useSetLocation(setCurrentLocation);
 
   const handleChangeStar = (location) => {
     const favoritesObj = routes.find((k) => k.path === location);
@@ -52,54 +57,72 @@ function App() {
       if (newStarValue) {
         setFavorites(newFavoriteList);
       }
+      //if star value is false return an array with the objects that don't match location
+      if (!newStarValue) {
+        const filteredFavorites = favorites.filter((r) => r.path !== location);
+        //then setFavorites to the values of the new array
+        setFavorites(filteredFavorites);
+      }
 
       return newStarValue;
     });
   };
-  console.log(favorites);
+
+  useEffect(() => {
+    setCurrentLocation(location.pathname);
+    const favoritePath = favorites
+      .map((f) => f.path)
+      .includes(location.pathname)
+      ? setStar(true)
+      : setStar(false);
+  });
 
   return (
-    <Router>
-      <div className="App">
+    <div className="App">
+      <Link to="/people-and-culture">
         <div className="logo">
-          <Link to="/people-and-culture">
+          <div className="grid-logo1">
             <img className="logo-1" src={Logo1} alt="logo1" />
-            <img className="logo-2" src={Logo2} alt="logo2" />
-          </Link>
-        </div>
-
-        <Topbar
-          routes={routes}
-          handleChangeStar={handleChangeStar}
-          star={star}
-        />
-
-        <div className="app-container">
-          <div className="grid-sidebar">
-            <Sidebar
-              routes={routes}
-              star={star}
-              favorites={favorites}
-              handleChangeStar={handleChangeStar}
-            />
           </div>
-
-          <Switch>
-            <Route path="/people-and-culture" exact>
-              <PeopleAndCulture className="grid-pc" />
-            </Route>
-
-            <Route path="/policies" exact>
-              <Policies className="grid-pc" />
-            </Route>
-
-            <Route path="/management-resources" exact>
-              <ManagementResources className="grid-pc" />
-            </Route>
-          </Switch>
+          <div className="grid-logo2">
+            <img className="logo-2" src={Logo2} alt="logo2" />
+          </div>
         </div>
+      </Link>
+
+      <Topbar
+        routes={routes}
+        handleChangeStar={handleChangeStar}
+        star={star}
+        favorites={favorites}
+        location={location}
+      />
+
+      <div className="app-container">
+        <div className="grid-sidebar">
+          <Sidebar
+            routes={routes}
+            star={star}
+            favorites={favorites}
+            handleChangeStar={handleChangeStar}
+          />
+        </div>
+
+        <Switch>
+          <Route path="/people-and-culture" exact>
+            <PeopleAndCulture />
+          </Route>
+
+          <Route path="/policies" exact>
+            <Policies />
+          </Route>
+
+          <Route path="/management-resources" exact>
+            <ManagementResources />
+          </Route>
+        </Switch>
       </div>
-    </Router>
+    </div>
   );
 }
 

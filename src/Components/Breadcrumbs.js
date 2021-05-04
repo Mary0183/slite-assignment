@@ -12,6 +12,9 @@ function Breadcrumbs(props) {
       <div>
         <div className="breadcrumbs-container">
           <ul className="breadcrumb">
+            {props.favorites
+              .map((f) => f.path)
+              .includes(props.location.pathname) && <span>Favorites</span>}
             {filteredBreadcrumbs.map(({ match, breadcrumb }) => (
               <span key={match.path}>
                 <Link to={match.path}>{breadcrumb} </Link>

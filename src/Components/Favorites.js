@@ -13,7 +13,13 @@ function Favorites(props) {
           <Link onClick={() => setActive(!active)}>Favorites </Link>
           {active && (
             <ul>
-              <li>hello</li>
+              {props.favorites.map((t) => (
+                <li key={t.title}>
+                  <Link className="link-title" to={t.path}>
+                    {t.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           )}
         </li>
