@@ -24,17 +24,17 @@ const routes = [
   {
     title: "🥇People and culture",
     path: "/people-and-culture",
-    breadcrumb: "People and culture",
+    breadcrumb: "🥇People and culture",
   },
   {
     title: "📚Policies",
     path: "/policies",
-    breadcrumb: "Policies",
+    breadcrumb: "📚Policies",
   },
   {
     title: "📖Management resources",
     path: "/management-resources",
-    breadcrumb: "Management resources",
+    breadcrumb: "📖Management resources",
   },
 ];
 

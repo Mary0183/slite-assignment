@@ -1,7 +1,19 @@
-.favorites {
+/* .favorites {
   margin-bottom: 15px;
   background: url("../images/stroke.svg") 0 2px / 14px 14px no-repeat;
   background-size: 18px;
   padding-left: 20px;
   display: block;
+} */
+
+.p-favorites {
+  margin-bottom: 15px;
+  background: url("../images/plain.svg") 0 2px / 14px 14px no-repeat;
+  background-size: 18px;
+  padding-left: 20px;
+  display: block;
+  font-size: 19px;
+  color: #46474f;
+  line-height: 25px;
+  margin: 0;
 }

@@ -14,9 +14,11 @@ function Breadcrumbs(props) {
           <ul className="breadcrumb">
             {props.favorites
               .map((f) => f.path)
-              .includes(props.location.pathname) && <span>Favorites</span>}
+              .includes(props.location.pathname) && (
+              <span className="span-favorites">Favorites</span>
+            )}
             {filteredBreadcrumbs.map(({ match, breadcrumb }) => (
-              <span key={match.path}>
+              <span className="span-breadcrumb" key={match.path}>
                 <Link to={match.path}>{breadcrumb} </Link>
               </span>
             ))}

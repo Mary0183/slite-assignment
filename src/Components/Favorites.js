@@ -10,7 +10,9 @@ function Favorites(props) {
     <div>
       <ul>
         <li className="favorites">
-          <Link onClick={() => setActive(!active)}>Favorites </Link>
+          <Link onClick={() => setActive(!active)}>
+            <p className="p-favorites">Favorites</p>
+          </Link>
           {active && (
             <ul>
               {props.favorites.map((t) => (
