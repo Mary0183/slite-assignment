@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import useBreadcrumbs from "use-react-router-breadcrumbs";
 import SideChevron from "../images/right.svg";
 
-function Breadcrumbs(props) {
-  const breadcrumbs = useBreadcrumbs(props.routes);
+function Breadcrumbs({ routes, favorites, location }) {
+  const breadcrumbs = useBreadcrumbs(routes);
+  //filering "/" home so it won't show
   const filteredBreadcrumbs = breadcrumbs.filter((home) => home.key !== "/");
 
   return (
@@ -13,9 +14,7 @@ function Breadcrumbs(props) {
       <div>
         <div className="breadcrumbs-container">
           <div className="breadcrumb">
-            {props.favorites
-              .map((f) => f.path)
-              .includes(props.location.pathname) && (
+            {favorites.map((f) => f.path).includes(location.pathname) && (
               <span className="span-favorites">
                 Favorites
                 <img

@@ -4,17 +4,9 @@ import "./AddRemoveFav.css";
 import Star from "../images/plain.svg";
 import RemoveStar from "../images/stroke.svg";
 
-function useSetLocation(setCurrentLocation) {
-  let location = useLocation();
-
-  useEffect(() => {
-    setCurrentLocation(location.pathname);
-  });
-}
-
 function AddRemoveFav(props) {
-  const [currentLocation, setCurrentLocation] = useState("");
-  useSetLocation(setCurrentLocation);
+  // const [currentLocation, setCurrentLocation] = useState("");
+  const location = useLocation();
 
   return (
     <div className="AddRemoveFav">
@@ -23,14 +15,14 @@ function AddRemoveFav(props) {
           className="remove-favorite"
           src={RemoveStar}
           alt="remove element"
-          onClick={() => props.handleChangeStar(currentLocation)}
+          onClick={() => props.handleChangeStar(location.pathname)}
         />
       ) : (
         <img
           className="add-favorite"
           src={Star}
           alt="add element "
-          onClick={() => props.handleChangeStar(currentLocation)} // the function is passed to the onClick handler and will be triggered only onClick
+          onClick={() => props.handleChangeStar(location.pathname)} // the function is passed to the onClick handler and will be triggered only onClick
         />
       )}
     </div>
