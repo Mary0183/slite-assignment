@@ -18,7 +18,7 @@ function ManagementResources() {
       </div>
       <div className="template">
         <h2 className="template-ex">Template example:</h2>
-        <img src={Template}></img>
+        <img src={Template} alt="template"></img>
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ body {
 .App {
   height: 100%;
   background-color: #788aee;
-  width: 1282px;
+  width: 1302px;
   margin: 0 auto;
 
   margin-top: 60px;
@@ -38,7 +38,7 @@ img.logo-2 {
 
 .app-container {
   display: grid;
-  grid-template-columns: repeat(1, 25% 75%);
+  grid-template-columns: repeat(1, 30% 70%);
   height: 100%;
   margin: 0 70px 0 70px;
   background-color: #fdfdfd;

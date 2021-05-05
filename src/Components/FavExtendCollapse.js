@@ -4,14 +4,14 @@ import DownChevron from "../images/down.svg";
 
 import "./FavExtendCollapse.css";
 
-function FavExtendCollapse(props) {
-  const [active, setActive] = useState(true);
+function FavExtendCollapse({ favorites, currentLocation }) {
+  const [active, setActive] = useState(false);
 
   return (
     <div>
       <ul>
         <li className="favorites">
-          <a onClick={() => setActive(!active)}>
+          <div onClick={() => setActive(!active)}>
             <div className="dropdown-favorites">
               <div className="fav-text">
                 <p className="p-favorites">Favorites</p>
@@ -24,12 +24,15 @@ function FavExtendCollapse(props) {
                 ></img>
               </div>
             </div>
-          </a>
+          </div>
           {active && (
             <ul className="ul-favorites">
-              {props.favorites.map((t) => (
+              {favorites.map((t) => (
                 <li key={t.title}>
-                  <Link to={t.path} className="link-title">
+                  <Link
+                    to={t.path}
+                    className={t.path === currentLocation ? "active" : ""}
+                  >
                     {t.title}
                   </Link>
                 </li>

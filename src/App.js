@@ -13,14 +13,7 @@ import PeopleAndCulture from "./Components/PeopleAndCulture";
 import Policies from "./Components/Policies";
 import ManagementResources from "./Components/ManagementResources";
 
-// import wave from "./images/wave.svg";
-
 const routes = [
-  // {
-  //   title: "Home",
-  //   path: "/",
-  //   breadcrumb: "Home",
-  // },
   {
     title: "🥇People and culture",
     path: "/people-and-culture",
@@ -42,7 +35,6 @@ function App() {
   let location = useLocation();
   const [favorites, setFavorites] = useState([]); //{title: "Policies" , path: "/Policies"}
   const [star, setStar] = useState(false);
-  const [currentLocation, setCurrentLocation] = useState("");
 
   const handleChangeStar = (location) => {
     const favoritesObj = routes.find((k) => k.path === location);
@@ -50,12 +42,14 @@ function App() {
 
     //take the value that the state star has at that moment in time and toggle it
     //if the new value is true setFavorites to new list
+    //add to fovorites
     setStar((previousStar) => {
       const newStarValue = !previousStar;
       if (newStarValue) {
         setFavorites(newFavoriteList);
       }
       //if star value is false return an array with the objects that don't match location
+      //remove from favorites
       if (!newStarValue) {
         const filteredFavorites = favorites.filter((r) => r.path !== location);
         //then setFavorites to the values of the new array
@@ -65,13 +59,12 @@ function App() {
       return newStarValue;
     });
   };
-  //will keep
+
   useEffect(() => {
-    setCurrentLocation(location.pathname);
     favorites.map((f) => f.path).includes(location.pathname)
       ? setStar(true)
       : setStar(false);
-  });
+  }, [favorites, location]);
 
   return (
     <div className="App">
@@ -100,7 +93,7 @@ function App() {
             routes={routes}
             star={star}
             favorites={favorites}
-            handleChangeStar={handleChangeStar}
+            currentLocation={location.pathname}
           />
         </div>
 
