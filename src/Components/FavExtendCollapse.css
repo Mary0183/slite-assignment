@@ -5,6 +5,28 @@
   padding-left: 20px;
   display: block;
 } */
+.dropdown-favorites {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #f5f5f7;
+  margin-left: 30px;
+  width: 230px;
+  height: 40px;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.fav-text {
+  margin-left: 8px;
+}
+
+img.down-chevron {
+  width: 20px;
+  padding-right: 15px;
+}
+.fav-chev {
+  justify-self: end;
+}
 
 .p-favorites {
   margin-bottom: 15px;
@@ -15,5 +37,8 @@
   font-size: 19px;
   color: #46474f;
   line-height: 25px;
+  margin: 0;
+}
+.ul-favorites {
   margin: 0;
 }

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import DownChevron from "../images/down.svg";
 
-import "./Favorites.css";
+import "./FavExtendCollapse.css";
 
-function Favorites(props) {
+function FavExtendCollapse(props) {
   const [active, setActive] = useState(true);
 
   return (
@@ -11,10 +12,21 @@ function Favorites(props) {
       <ul>
         <li className="favorites">
           <Link onClick={() => setActive(!active)}>
-            <p className="p-favorites">Favorites</p>
+            <div className="dropdown-favorites">
+              <div className="fav-text">
+                <p className="p-favorites">Favorites</p>
+              </div>
+              <div className="fav-chev">
+                <img
+                  className="down-chevron"
+                  src={DownChevron}
+                  alt="down chevron"
+                ></img>
+              </div>
+            </div>
           </Link>
           {active && (
-            <ul>
+            <ul className="ul-favorites">
               {props.favorites.map((t) => (
                 <li key={t.title}>
                   <Link className="link-title" to={t.path}>
@@ -30,4 +42,4 @@ function Favorites(props) {
   );
 }
 
-export default Favorites;
+export default FavExtendCollapse;

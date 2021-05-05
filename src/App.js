@@ -44,8 +44,6 @@ function App() {
   const [star, setStar] = useState(false);
   const [currentLocation, setCurrentLocation] = useState("");
 
-  // useSetLocation(setCurrentLocation);
-
   const handleChangeStar = (location) => {
     const favoritesObj = routes.find((k) => k.path === location);
     const newFavoriteList = [...favorites, favoritesObj];
@@ -67,12 +65,10 @@ function App() {
       return newStarValue;
     });
   };
-
+  //map through favorites , if favorites path string includes current location string setStar true, if not then to false
   useEffect(() => {
     setCurrentLocation(location.pathname);
-    const favoritePath = favorites
-      .map((f) => f.path)
-      .includes(location.pathname)
+    favorites.map((f) => f.path).includes(location.pathname)
       ? setStar(true)
       : setStar(false);
   });

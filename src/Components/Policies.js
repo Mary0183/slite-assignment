@@ -5,7 +5,7 @@ function Policies() {
   return (
     <div className="policies-container">
       <h1>Our Policies </h1>
-      <div className="callout callout-default">
+      <div className="callout-policies callout-default-policies">
         <div className="grid-callout">
           <p className="callout-text">
             Here you can read about our work remote working agreement,

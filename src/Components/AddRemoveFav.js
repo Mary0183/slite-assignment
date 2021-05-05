@@ -23,14 +23,14 @@ function AddRemoveFav(props) {
           className="remove-favorite"
           src={RemoveStar}
           alt="remove element"
-          onClick={() => props.handleChangeStar(currentLocation)} // the function is passed to the onClick handler and will be triggered only onClick
+          onClick={() => props.handleChangeStar(currentLocation)}
         />
       ) : (
         <img
           className="add-favorite"
           src={Star}
           alt="add element "
-          onClick={() => props.handleChangeStar(currentLocation)}
+          onClick={() => props.handleChangeStar(currentLocation)} // the function is passed to the onClick handler and will be triggered only onClick
         />
       )}
     </div>
