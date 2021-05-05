@@ -65,7 +65,7 @@ function App() {
       return newStarValue;
     });
   };
-  //if favorites path string includes current location string star state is true, if not then to false
+  //will keep
   useEffect(() => {
     setCurrentLocation(location.pathname);
     favorites.map((f) => f.path).includes(location.pathname)

@@ -11,7 +11,7 @@ function FavExtendCollapse(props) {
     <div>
       <ul>
         <li className="favorites">
-          <Link onClick={() => setActive(!active)}>
+          <a onClick={() => setActive(!active)}>
             <div className="dropdown-favorites">
               <div className="fav-text">
                 <p className="p-favorites">Favorites</p>
@@ -24,12 +24,12 @@ function FavExtendCollapse(props) {
                 ></img>
               </div>
             </div>
-          </Link>
+          </a>
           {active && (
             <ul className="ul-favorites">
               {props.favorites.map((t) => (
                 <li key={t.title}>
-                  <Link className="link-title" to={t.path}>
+                  <Link to={t.path} className="link-title">
                     {t.title}
                   </Link>
                 </li>
